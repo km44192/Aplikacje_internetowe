@@ -20,7 +20,7 @@
 .twoja:hover
 {
    background-color:pink;
-transition: height .4s linear;
+transition: height .5s linear;
 
 height:75px;
 
