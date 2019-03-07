@@ -1,8 +1,27 @@
-#one
+.one
 {
     background-color:blue;
+    width:75%;
 }
-#twoja
+.twoja
 {
     background-color:yellow;
+    width:75%;
+    height:20px;
+
+
+}
+#container
+{
+    width:30%;
+    margin: 0 auto;
+    background-color:black;
+}
+.twoja:hover
+{
+   background-color:pink;
+transition: height .3s linear;
+
+height:75px;
+
 }
