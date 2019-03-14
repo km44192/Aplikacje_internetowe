@@ -1,27 +1,29 @@
-.one
-{
-    background-color:blue;
-    width:75%;
-}
-.twoja
-{
-    background-color:yellow;
-    width:75%;
-    height:20px;
 
-
-}
 #container
 {
-    width:30%;
+    width:70%;
     margin: 0 auto;
     background-color:black;
+    display:flex;
+
+
 }
-.twoja:hover
+#container > div
 {
-   background-color:pink;
-transition: height .5s linear;
-
-height:75px;
+    flex-grow:1;
+    height:50px;
+    background-color:pink;
 
 }
+#conteiner > div > div:nth-child(2)
+{
+    flex-grow:2
+}
+#container > div:hover
+{
+flex-grow:2;
+background-color:pink;
+transition: width .5s linear;
+width:100%;
+}
+
