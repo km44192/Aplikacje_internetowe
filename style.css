@@ -1,30 +1,50 @@
-
-#container
+﻿
+.container
 {
-    width:70%;
-    margin: 0 auto;
-    background-color:black;
+    background-color:magenta;
+    width:100px;
     display:flex;
-
+    flex-direction:column;
+    border:solid black 1px;
+   height:400px;
 
 }
-#container > div
+div
 {
+ 
     flex-grow:1;
-    height:50px;
-    background-color:pink;
-
+   
+  
 }
-#conteiner > div > div:nth-child(3)
+.container>div:nth-child(2)
 {
+   border-top:solid black 1px;
+   border-bottom:solid black 1px;
     flex-grow:2;
 
 }
-#container > div:hover
+
+.container_2
 {
-flex-grow:2;
-background-color:pink;
-transition: width .5s linear;
-width:100%;
+    flex-grow:1;
+    background-color:cyan;
+    border-top:solid black 1px;
+    border-bottom:solid black 1px;
+}
+.container_3
+{flex-grow:2;
+    background-color:green;
+    border-top:solid black 1px;
+    border-bottom:solid black 1px;
+    border-left:solid black 1px;
+    border-right:solid black 1px;
 }
 
+.cialo {
+    display: flex;
+    width: 75%;
+ 
+    margin: 0 auto;
+    display: flex;
+    flex-direction:row;
+}
