@@ -1,12 +1,12 @@
 ﻿.cialo
 {
     width:20%;
-    height:60%;
+    height:50%;
     border:solid black 1px;
     background-color:aquamarine;
     margin: 0 auto;
 }
-.cialo>div
+.cialo>div,button
 {
     display:flex;
     justify-content:center;
@@ -58,13 +58,13 @@ div>:nth-child(16)
     background-color:red;
 }
 
-.cialo>div:hover
+.cialo>button:hover
 {
     background-color:cornsilk;
     box-shadow:black 1px 1px;
 
 }
-div>.container:active
+div>:active
 {
 background-color:grey;
 }
