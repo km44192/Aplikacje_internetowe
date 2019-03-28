@@ -16,7 +16,7 @@ div>:nth-child(1)
 {
     grid-column-start:1;
     grid-column-end:span 4;
-    background-color: black !important;
+    background-color: silver !important;
 }
 div>:nth-child(14)
 {
@@ -33,6 +33,7 @@ font-size:20px;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 20% 1fr 1fr 1fr 1fr;
+
 
 
 }
@@ -60,7 +61,12 @@ div>:nth-child(16)
 .cialo>div:hover
 {
     background-color:cornsilk;
-    box-shadow:black 10px;
+    box-shadow:black 1px 1px;
+
+}
+div>.container:active
+{
+background-color:grey;
 }
 
 html,body
