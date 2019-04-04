@@ -5,16 +5,59 @@ const init= (e,x) =>
     console.log(typeof e);
     console.log(double (x));
 }
+const fields = [
+   { text:1,row:4, column:1},
+    {text:2,row: 4, column:2},
+    {text: 3,row: 4, column:3},
+    { text:4,row:3, column:1},
+    {text:5,row: 3, column:2},
+    {text: 6,row: 3, column:3},
+    { text:7,row:2, column:1},
+    {text:8,row: 2, column:2},
+    {text: 9,row: 2, column:3},
+    { text:0,row:5, column:'1/3'},
+    {text:'+',row: 3, column:4},
+    {text:'-',row: 4, column:4},
+    { text:'.',row:5, column:3},
+    {text:'C',row: 2, column:4},
+    {text:'=',row:5,column:4},
+    {text: 'display',row: 1, column:'1/5'}
+];
+const init1=()=>
+{
+    const zmienna= document.createElement('div');
+    zmienna.id="cialo";
+    fields.forEach(each_array_element=>{
+        const div = document.createElement('div');
 
-window.addEventListener("DOMContentLoaded",e=> init(e,5));
-var s="";
+        div.textContent= each_array_element.text;
+        div.style.gridColumn=each_array_element.column;
+        div.style.gridRow=each_array_element.row;
+        if(each_array_element.text==='display')
+        {
+            div.id='display';
+        }
+        else{
+        div.addEventListener('click',event=>{
+            const d =document.getElementById('display');
+            d.textContent=event.target.textContent;
+        });
+
+    }
+        zmienna.appendChild(div);
+        console.log('div');});
+document.body.appendChild(zmienna);
+}
+
+window.addEventListener("DOMContentLoaded",init1);
+ /*var s="";
 var c=0;
 var z;
 function klik(a)
 {
 
     x=a;
-    
+
     switch(x)
     {
                 case '1':
@@ -28,7 +71,7 @@ function klik(a)
                 case '11':
                 case '13': ///przyciski numeryczne
                 var b =document.getElementById(x).innerHTML;
-                
+
                 s=s+b;
                 document.getElementById('Display').innerHTML=s;
                 break;
@@ -40,24 +83,15 @@ function klik(a)
                 case '8': //przycisk +
                 c=c+0;
                 s=parseInt(s);
-
-                console.log(s);
-
-        
-
                 c=c+s;
                 console.log("Suma",c);
-
                 s=s.toString();
 
-                console.log(s);
-
                 s="";
-
                 z=8;
                 break;
-    case '12': // przycisk odejmowania - 
-    c=c+0;
+    case '12': // przycisk odejmowania -
+
     s=parseInt(s);
     c=c-s;
     console.log("Róznica",c);
@@ -73,10 +107,10 @@ s="";
         s=parseInt(s);
             c=s+c;
         s=s.toString();
-        s="";
+            s="";
     }
     else if(z==12 && s!="")
-    { 
+    {
         s=parseInt(s);
         c=c-s;
         s=s.toString();
@@ -84,9 +118,11 @@ s="";
     }
         document.getElementById('Display').innerHTML=c;
         break;
-        
+
     }
-    
-    
+
+
 }
+*/
+
 

@@ -1,64 +1,30 @@
-﻿.cialo
+﻿#cialo
 {
     width:20%;
     height:50%;
     border:solid black 1px;
     background-color:aquamarine;
     margin: 0 auto;
+
+
+
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 20% 1fr 1fr 1fr 1fr;
+  grid-gap:3px;
 }
-.cialo>div,button
+
+#cialo>div,button
 {
     display:flex;
     justify-content:center;
     align-items: center;
 }
-div>:nth-child(1)
-{
-    grid-column-start:1;
-    grid-column-end:span 4;
-    background-color: silver !important;
-}
-div>:nth-child(14)
-{
-    grid-column-start:1;
-    grid-column-end: span 2;
-}
-div
-{
-    grid-gap:3px;
-font-family:verdana;
-font-size:20px;
-    box-sizing: border-box;
-
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 20% 1fr 1fr 1fr 1fr;
 
 
 
-}
-div>:nth-child(5)
-{
-    background-color:aqua;
-}
-div>:nth-child(9)
-{
-    background-color:aqua;
-}
-div>:nth-child(13)
-{
-    background-color:aqua;
-}
-div>:nth-child(15)
-{
-    background-color:aqua;
-}
-div>:nth-child(16)
-{
-    background-color:red;
-}
 
-.cialo>button:hover
+#cialo>div:hover
 {
     background-color:cornsilk;
     box-shadow:black 1px 1px;
