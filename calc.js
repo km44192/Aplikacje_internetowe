@@ -5,6 +5,53 @@ const init= (e,x) =>
     console.log(typeof e);
     console.log(double (x));
 }
+let mem=0;
+let clearflag=false;
+let op=0;
+const handleClick = ev=>
+{
+    const disp = document.getElementById('display');
+    const key = ev.target.textContent;
+    switch (key)
+    {
+        case 'C':
+        disp.textContent='0';
+        op=0;
+        clearFlag=false;
+        mem=0;
+        break;
+        case '+':
+        case '-':
+        if(op===0)
+        mem=parseFloat(disp.textContent);
+        else{
+            mem+=op * parseFloat(disp.textContent);
+        }
+        op=key==='+' ? 1: -1;
+        clearflag =true;
+        break;
+        case '=':
+    disp.textContent=mem+parseFloat(disp.textContent) *op;
+
+        op=0;
+
+        break;
+    default:
+    if(key=='.'&&disp.textContent.includes('.'))
+    return;
+    if(key=='0'&&disp.textConetent==='0')
+    return;
+    if((key!=='.'&& disp.textContent=='0')||clearflag)
+    {
+        disp.textContent= key;
+        clearflag=false;
+    }
+    else
+    disp.textContent+=key;
+    break;
+    }
+
+}
 const fields = [
    { text:1,row:4, column:1},
     {text:2,row: 4, column:2},
@@ -36,12 +83,10 @@ const init1=()=>
         if(each_array_element.text==='display')
         {
             div.id='display';
+            div.textContent="";
         }
         else{
-        div.addEventListener('click',event=>{
-            const d =document.getElementById('display');
-            d.textContent=event.target.textContent;
-        });
+        div.addEventListener('click',handleClick);
 
     }
         zmienna.appendChild(div);
@@ -50,6 +95,7 @@ document.body.appendChild(zmienna);
 }
 
 window.addEventListener("DOMContentLoaded",init1);
+
  /*var s="";
 var c=0;
 var z;
